@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['aos', 'swiper/react'], // No extra curly brace
+      external: ['aos', 'swiper/react', 'react-scroll'], // No extra curly brace
     }
   }
 })
