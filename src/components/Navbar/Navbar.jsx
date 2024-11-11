@@ -2,14 +2,13 @@ import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-scroll';
 import "./Navbar.css";
-import Logo from "../../assets/logo.png"
-import invite from "../../assets/invite.pdf"
+import Logo from "../../assets/logo.png";
+import invite from "../../assets/invite.pdf";
 
 // Navigation Links
 const navigation = [
     { name: 'About', href: 'about', current: true },
     { name: 'Team', href: 'team', current: false },
-    // Update the 'Guidelines' link for PDF download
     { name: 'Guidelines', href: invite, current: false, download: true },
     { name: 'Venue', href: 'venue', current: false },
     { name: 'Register', href: 'register', current: false },
@@ -23,14 +22,14 @@ export default function Navbar() {
 
                     {/* Logo on the left */}
                     <div className="absolute inset-y-0 left-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                        <Link to={"/"} className="navLink">
+                        <Link to="/" className="navLink">
                             <img src={Logo} alt="Logo" className="logo" />
                         </Link>
                     </div>
 
                     {/* Mobile menu button */}
                     <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
-                        <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-100 focus:outline-none focus:ring-2 focus:ring-inset ">
+                        <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-100 focus:outline-none focus:ring-2 focus:ring-inset">
                             <span className="sr-only">Open main menu</span>
                             <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
                             <XMarkIcon className="hidden h-6 w-6" aria-hidden="true" />
@@ -57,7 +56,7 @@ export default function Navbar() {
                                             to={item.href}
                                             smooth={true}
                                             duration={500}
-                                            className="navLink transition duration-300"
+                                            className={`navLink transition duration-300 ${item.current ? 'text-blue-600' : ''}`} // Highlight active link
                                         >
                                             {item.name}
                                         </Link>
