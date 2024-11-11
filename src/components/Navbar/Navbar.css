@@ -1,6 +1,12 @@
 .custom-navbar {
+    position: sticky;
+    top: 0;
+    /* Stick to the top of the page */
+    z-index: 1000;
+    /* Ensure the navbar stays above other content */
     border-bottom: 1px solid rgba(128, 128, 128, 0.361);
     background-color: #010310;
+    width: 100%;
 }
 
 .navLink {
@@ -30,8 +36,6 @@
 .navLink:nth-child(5):hover {
     background-color: #9d0208;
 }
-
-
 
 .logo {
     height: 80px;
