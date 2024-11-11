@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['aos'], // Add 'aos' to the external array
+      external: ['aos', 'swiper/react'], // Add 'swiper/react' to the external array
     }
   }
 })
