@@ -1,0 +1,22 @@
+:root {
+  --bgColor: #010310;
+  --darkRed: #6a040f;
+  --medRed: #9d0208;
+  --lightRed: #d00000;
+}
+
+
+.app {
+  overflow: hidden;
+  padding: 0px 2rem;
+}
+
+
+body {
+  overflow: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
