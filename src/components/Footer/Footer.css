@@ -56,7 +56,6 @@
     }
 
     .footUp h1 {
-        color: var(--title);
         font-size: 24px;
         font-weight: 500;
         line-height: 150%;
@@ -120,7 +119,6 @@
 
 @media (max-width: 680px) {
     .footer {
-        background-color: white;
         padding: 30px;
         margin-bottom: 1rem;
     }
@@ -149,13 +147,11 @@
 
 @media (max-width: 410px) {
     .footer {
-        background-color: white;
         padding: 15px;
         margin-bottom: 1rem;
     }
 
     .footUp h1 {
-        color: black;
         font-size: 18px;
         font-weight: 500;
         line-height: 150%;
