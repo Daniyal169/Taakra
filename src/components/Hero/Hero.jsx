@@ -6,7 +6,7 @@ function Hero() {
     return (
         <>
             <div className="relative min-h-[90vh] sm:h-[50vh] md:h-[90vh]" data-aos="fade-in">
-                <video autoPlay muted loop className="w-full h-full opacity-20 absolute top-0 left-0 object-cover">
+                <video autoPlay muted loop className="w-full h-full opacity-30 absolute top-0 left-0 object-cover">
                     <source src={vid} type="video/mp4" />
                 </video>
 
