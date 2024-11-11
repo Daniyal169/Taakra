@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['aos', 'swiper/react', 'swiper/css', 'react-scroll'], // Added swiper/css here
+      external: ['aos', 'swiper/react', 'swiper/css', 'react-scroll', 'swiper/modules'], // Added swiper/css here
     }
   },
   optimizeDeps: {
