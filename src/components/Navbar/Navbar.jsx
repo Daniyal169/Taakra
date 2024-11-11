@@ -1,16 +1,17 @@
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Link } from 'react-scroll';
 import "./Navbar.css";
 import Logo from "../../assets/logo.png";
 import invite from "../../assets/invite.pdf";
 
 // Navigation Links
 const navigation = [
-    { name: 'About', href: '#about', current: true },
-    { name: 'Team', href: '#team', current: false },
+    { name: 'About', href: 'about', current: true },
+    { name: 'Team', href: 'team', current: false },
     { name: 'Guidelines', href: invite, current: false, download: true },
-    { name: 'Venue', href: '#venue', current: false },
-    { name: 'Register', href: '#register', current: false },
+    { name: 'Venue', href: 'venue', current: false },
+    { name: 'Register', href: 'register', current: false },
 ];
 
 export default function Navbar() {
@@ -21,9 +22,9 @@ export default function Navbar() {
 
                     {/* Logo on the left */}
                     <div className="absolute inset-y-0 left-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                        <a href="/" className="navLink">
+                        <Link to="/" className="navLink">
                             <img src={Logo} alt="Logo" className="logo" />
-                        </a>
+                        </Link>
                     </div>
 
                     {/* Mobile menu button */}
@@ -50,13 +51,15 @@ export default function Navbar() {
                                             {item.name}
                                         </a>
                                     ) : (
-                                        <a
+                                        <Link
                                             key={item.name}
-                                            href={item.href}
+                                            to={item.href}
+                                            smooth={true}
+                                            duration={500}
                                             className={`navLink transition duration-300 ${item.current ? 'text-blue-600' : ''}`} // Highlight active link
                                         >
                                             {item.name}
-                                        </a>
+                                        </Link>
                                     )
                                 ))}
                             </div>
@@ -81,8 +84,10 @@ export default function Navbar() {
                         ) : (
                             <Disclosure.Button
                                 key={item.name}
-                                as="a"
-                                href={item.href}
+                                as={Link}
+                                to={item.href}
+                                smooth={true}
+                                duration={500}
                                 className="navLink block px-3 py-2 rounded-md text-base font-medium"
                             >
                                 {item.name}
